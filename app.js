@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));//used to get the data the user
 
 //Using the code below we take the signup.html file and host at root directory
 app.get("/", function(req, res){
-  res.sendFile(__dirname+"/signup.html");
+  res.sendFile(__dirname+"/index.html");
 });
 
 //post route
@@ -23,7 +23,7 @@ app.post("/",function(req, res){
   var email = req.body.email;
 
   //*****************************ENTER YOU LIST ID HERE******************************
-const listId = "754d932531";
+const listId = "754d123456";
 //Creating an object with the users data
 const subscribingUser = {
  firstName: firstName,
@@ -66,12 +66,7 @@ app.listen(process.env.PORT || 3000, function(){
 //Setting up MailChimp
 mailchimp.setConfig({
 //*****************************ENTER YOUR API KEY HERE******************************
- apiKey: "6cec040f9844f2f77d88ef50637c0e98-us6",
+ apiKey: "6cdsfgff9844f2f77d88efsdferc0e98-us6",
 //*****************************ENTER YOUR API KEY PREFIX HERE i.e.THE SERVER******************************
  server: "us6"
 });
-
-
-//api key
-//6cec040f9844f2f77d88ef50637c0e98-us6
-//754d932531
